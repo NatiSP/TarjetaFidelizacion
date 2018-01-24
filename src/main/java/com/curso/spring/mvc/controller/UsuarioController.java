@@ -30,7 +30,20 @@ public class UsuarioController {
 	 * @return
 	 */
 	@RequestMapping(path = "/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
-	public UsuarioDTO obtenerUsuario(Map<String, Object> model, @PathVariable int id) {
+	public UsuarioDTO obtenerUsuarioJSON(Map<String, Object> model, @PathVariable int id) {
 		return usuarioService.obtenerUsuario(id);
+	}
+	
+	/**
+	 * Metodo que busca un usuario por su id
+	 * @param model
+	 * @param persona
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping(path = "/miPerfil", method = RequestMethod.GET)
+	public String obtenerUsuarioMiPerfil(Map<String, Object> model) {
+		model.put("usuario", usuarioService.obtenerUsuario(1));
+		return "detalleUsuario";
 	}
 }

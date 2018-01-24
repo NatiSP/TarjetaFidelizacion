@@ -4,6 +4,7 @@ public class TarjetaDTO {
 
 	private String id;
 	private String numeroTarjeta;
+	private ClienteDTO cliente;
 	
 	public String getId() {
 		return id;
@@ -16,5 +17,11 @@ public class TarjetaDTO {
 	}
 	public void setNumeroTarjeta(String numeroTarjeta) {
 		this.numeroTarjeta = numeroTarjeta;
+	}
+	public ClienteDTO getCliente() {
+		return cliente;
+	}
+	public void setCliente(ClienteDTO cliente) {
+		this.cliente = cliente;
 	}
 }
