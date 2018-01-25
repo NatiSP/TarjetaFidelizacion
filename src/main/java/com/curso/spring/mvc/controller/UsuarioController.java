@@ -12,15 +12,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.View;
 
 import com.curso.spring.mvc.dto.UsuarioDTO;
-import com.curso.spring.mvc.service.interfaz.IUsuarioService;
+import com.curso.spring.mvc.service.UsuarioService;
 
 @Controller
 @RequestMapping("/usuario")
 public class UsuarioController {
 
 	
+	private static final String DETALLE_USUARIO_VIEW = "detalleUsuario";
 	@Autowired
-	private IUsuarioService usuarioService;
+	private UsuarioService usuarioService;
 	
 	/**
 	 * Metodo que busca un mensaje de bienvenida por su id y lo completa con la informacion del objeto Persona que recibe por parametro
@@ -44,6 +45,6 @@ public class UsuarioController {
 	@RequestMapping(path = "/miPerfil", method = RequestMethod.GET)
 	public String obtenerUsuarioMiPerfil(Map<String, Object> model) {
 		model.put("usuario", usuarioService.obtenerUsuario(1));
-		return "detalleUsuario";
+		return DETALLE_USUARIO_VIEW;
 	}
 }

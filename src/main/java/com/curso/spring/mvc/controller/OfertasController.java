@@ -14,16 +14,17 @@ import org.springframework.web.servlet.View;
 
 import com.curso.spring.mvc.dto.OfertaDTO;
 import com.curso.spring.mvc.dto.UsuarioDTO;
-import com.curso.spring.mvc.service.interfaz.IOfertasService;
-import com.curso.spring.mvc.service.interfaz.IUsuarioService;
+import com.curso.spring.mvc.service.OfertasService;
+import com.curso.spring.mvc.service.UsuarioService;
 
 @Controller
 @RequestMapping("/ofertas")
 public class OfertasController {
 
 	
+	private static final String LISTA_OFERTAS_VIEW = "listaOfertas";
 	@Autowired
-	private IOfertasService ofertasService;
+	private OfertasService ofertasService;
 	
 	@RequestMapping(path = "/verDetalleOferta", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public OfertaDTO obtenerOfertaJSON(Map<String, Object> model, @PathVariable int id) {
@@ -39,7 +40,7 @@ public class OfertasController {
 	
 	@RequestMapping(path = "/verOfertas", method = RequestMethod.GET)
 	public String obtenerListaOfertas(Map<String, Object> model, @PathVariable int id) {
-		model.put("listaOfertas", ofertasService.verOfertas());
-		return "listaOfertas";
+		model.put("ofertas", ofertasService.verOfertas());
+		return LISTA_OFERTAS_VIEW;
 	}
 }
