@@ -2,14 +2,14 @@ package com.curso.spring.mvc.entity;
 
 public class Tarjeta {
 
-	private String id;
+	private int id;
 	private String numeroTarjeta;
 	private Cliente cliente;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNumeroTarjeta() {

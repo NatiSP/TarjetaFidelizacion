@@ -3,13 +3,11 @@ package com.curso.spring.mvc.controller;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.View;
 
 import com.curso.spring.mvc.dto.UsuarioDTO;
 import com.curso.spring.mvc.service.UsuarioService;
@@ -31,7 +29,7 @@ public class UsuarioController {
 	 * @return
 	 */
 	@RequestMapping(path = "/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
-	public UsuarioDTO obtenerUsuarioJSON(Map<String, Object> model, @PathVariable int id) {
+	public UsuarioDTO obtenerUsuarioJSONO(Map<String, Object> model, @PathVariable int id) {
 		return usuarioService.obtenerUsuario(id);
 	}
 	

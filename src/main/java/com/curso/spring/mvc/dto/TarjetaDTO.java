@@ -2,14 +2,14 @@ package com.curso.spring.mvc.dto;
 
 public class TarjetaDTO {
 
-	private String id;
+	private int id;
 	private String numeroTarjeta;
 	private ClienteDTO cliente;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNumeroTarjeta() {
