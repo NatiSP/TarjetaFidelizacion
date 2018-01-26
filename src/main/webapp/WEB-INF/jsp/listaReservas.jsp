@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="/TarjetaFidelizacion/usuario/miPerfil">Mi Perfil</a>
-<a href="/TarjetaFidelizacion/ofertas/verOfertas">Ver Ofertas</a>
-<a href="/TarjetaFidelizacion/reservas/misReservas">Mis Reservas</a>
-<a href="/TarjetaFidelizacion/movimientos/verMovimientos">Mis Movimientos</a>
+
 </body>
 </html>

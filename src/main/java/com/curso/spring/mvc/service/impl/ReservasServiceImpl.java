@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.curso.spring.mvc.dto.OfertaDTO;
 import com.curso.spring.mvc.dto.ReservaDTO;
@@ -13,6 +14,7 @@ import com.curso.spring.mvc.entity.mapper.OperadorMapper;
 import com.curso.spring.mvc.entity.mapper.TarjetaMapper;
 import com.curso.spring.mvc.service.ReservasService;
 
+@Service
 public class ReservasServiceImpl implements ReservasService{
 
 	@Autowired

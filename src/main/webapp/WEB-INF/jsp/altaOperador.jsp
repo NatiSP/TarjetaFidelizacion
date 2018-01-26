@@ -9,14 +9,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<form:form modelAttribute="usuario">
+	<form:form method="POST" modelAttribute="operador">
+		<form:input path="nombre" />
+		<form:input path="cif" />
+		<form:input path="web" />
 		<form:input path="usuario" />
 		<form:password path="password" />
-		<form:button>Login</form:button>
+		<form:button>Confirmar</form:button>
 	</form:form>
-
-	<a href="/TarjetaFidelizacion/usuario/altaCliente">Crear cuenta nueva</a>
-	<a href="/TarjetaFidelizacion/usuario/altaOperador">Soy una empresa</a>
 </body>
 </html>

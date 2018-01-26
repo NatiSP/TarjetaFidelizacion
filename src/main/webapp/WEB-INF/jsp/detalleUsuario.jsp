@@ -15,7 +15,14 @@
 			<td>${usuario.nombre}</td>
 		</tr>
 		<tr>
-			<td>Puntos: ${usuario.puntos}</td>
+			<td>Puntos:</td>
+			<td>${usuario.puntos}</td>
+		</tr>
+		<tr>
+			<td><a href="/TarjetaFidelizacion/movimientos/verMovimientos">Ver Movimientos</a></td>
+		</tr>
+		<tr>
+			<td><a href="/TarjetaFidelizacion/reservas/verReservas">Ver Reservas</a></td>
 		</tr>
 	</table>
 

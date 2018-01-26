@@ -17,6 +17,10 @@ import org.springframework.web.servlet.view.BeanNameViewResolver;
 import org.springframework.web.servlet.view.InternalResourceView;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.curso.spring.mvc.entity.mapper.ClienteMapper;
+import com.curso.spring.mvc.entity.mapper.OperadorMapper;
+import com.curso.spring.mvc.entity.mapper.TarjetaMapper;
+
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages="com.curso.spring.mvc")
@@ -61,6 +65,21 @@ public class ConfiguracionWeb implements WebMvcConfigurer{
 	@Bean
 	public ViewResolver internalResourceViewResolver() {
 		return new InternalResourceViewResolver("/WEB-INF/jsp/",".jsp");
+	}
+	
+	@Bean
+	public ClienteMapper clienteMapper() {
+		return new ClienteMapper();
+	}
+	
+	@Bean
+	public OperadorMapper operadorMapper() {
+		return new OperadorMapper();
+	}
+	
+	@Bean
+	public TarjetaMapper tarjetaMapper() {
+		return new TarjetaMapper();
 	}
 
 }

@@ -1,8 +1,11 @@
 package com.curso.spring.mvc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,5 +43,12 @@ public class MovimientosController {
 		movimientoCriteria.setIdMovimiento(idMovimiento);
 		movimientosService.detalleMovimiento(movimientoCriteria);
 		return DETALLE_MOVIMIENTOS_VIEW;
+	}
+	
+	@RequestMapping(path="/realizarMovimiento", method = RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE)
+	private ResponseEntity<MovimientoDTO> realizarMovimiento (@RequestBody MovimientoDTO movimiento) {
+		movimientosService.realizarMovimiento(movimiento);
+		ResponseEntity<MovimientoDTO> response = new ResponseEntity<MovimientoDTO>(movimiento, HttpStatus.OK);
+		return response;
 	}
 }

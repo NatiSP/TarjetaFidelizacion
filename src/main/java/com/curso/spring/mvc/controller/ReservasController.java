@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.curso.spring.mvc.dto.ClienteDTO;
+import com.curso.spring.mvc.dto.MovimientoDTO;
 import com.curso.spring.mvc.dto.OfertaDTO;
+import com.curso.spring.mvc.dto.ReservaDTO;
 import com.curso.spring.mvc.dto.TarjetaDTO;
 import com.curso.spring.mvc.service.ReservasService;
 
@@ -28,4 +31,20 @@ public class ReservasController {
 		reservasService.realizarReserva(oferta, tarjeta);
 		return "vistaReserva";
 	}
+	
+	@RequestMapping(path="/verReservas", method=RequestMethod.GET)
+	public String verReservas(@RequestParam int idUsuario) {
+		ReservaDTO reservaCriteria = new ReservaDTO();
+		MovimientoDTO movimientoCriteria = new MovimientoDTO();
+		TarjetaDTO tarjetaCriteria = new TarjetaDTO();
+		ClienteDTO clienteCriteria = new ClienteDTO();
+		clienteCriteria.setId(idUsuario);
+		tarjetaCriteria.setCliente(clienteCriteria);
+		movimientoCriteria.setTarjeta(tarjetaCriteria);
+		reservaCriteria.setMovimientoAsociado(movimientoCriteria);
+		
+		reservasService.verListaReservas(reservaCriteria);
+		return "vistaReserva";
+	}
+	
 }
