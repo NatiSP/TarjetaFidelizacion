@@ -33,12 +33,12 @@ public class ReservasController {
 	}
 	
 	@RequestMapping(path="/verReservas", method=RequestMethod.GET)
-	public String verReservas(@RequestParam int idUsuario) {
+	public String verReservas(@RequestParam int idReserva) {
 		ReservaDTO reservaCriteria = new ReservaDTO();
 		MovimientoDTO movimientoCriteria = new MovimientoDTO();
 		TarjetaDTO tarjetaCriteria = new TarjetaDTO();
 		ClienteDTO clienteCriteria = new ClienteDTO();
-		clienteCriteria.setId(idUsuario);
+		clienteCriteria.setId(idReserva);
 		tarjetaCriteria.setCliente(clienteCriteria);
 		movimientoCriteria.setTarjeta(tarjetaCriteria);
 		reservaCriteria.setMovimientoAsociado(movimientoCriteria);
