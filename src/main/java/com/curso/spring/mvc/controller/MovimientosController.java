@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.curso.spring.mvc.dto.ClienteDTO;
 import com.curso.spring.mvc.dto.MovimientoDTO;
+import com.curso.spring.mvc.dto.TarjetaDTO;
 import com.curso.spring.mvc.dto.UsuarioDTO;
 import com.curso.spring.mvc.service.MovimientosService;
 
@@ -31,9 +33,13 @@ public class MovimientosController {
 	
 	@RequestMapping(path = "/verMovimientos", method = RequestMethod.GET)
 	private String verMovimientosUsuarioJSP(@RequestParam int idUsuario) {
-		UsuarioDTO usuarioCriteria = new UsuarioDTO();
-		usuarioCriteria.setId(idUsuario);
-		movimientosService.verMovimientos(usuarioCriteria);
+		MovimientoDTO movimientoCriteria = new MovimientoDTO();
+		ClienteDTO cliente = new ClienteDTO();
+		TarjetaDTO tarjeta = new TarjetaDTO();
+		tarjeta.setCliente(cliente);
+		cliente.setId(idUsuario);
+		movimientoCriteria.setTarjeta(tarjeta);;
+		movimientosService.verMovimientos(movimientoCriteria);
 		return LISTA_MOVIMIENTOS_VIEW;
 	}
 	
