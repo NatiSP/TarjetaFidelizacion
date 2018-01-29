@@ -1,7 +1,12 @@
-package com.curso.spring.mvc.entity;
+package com.curso.spring.persistencia.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Tarjeta {
 
+	@Id
 	private int id;
 	private String numeroTarjeta;
 	private Cliente cliente;

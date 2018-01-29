@@ -1,5 +1,8 @@
-package com.curso.spring.mvc.entity;
+package com.curso.spring.persistencia.entity;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Cliente extends Usuario{
 
 	private int puntos;

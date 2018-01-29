@@ -1,9 +1,14 @@
-package com.curso.spring.mvc.entity;
+package com.curso.spring.persistencia.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Movimiento {
 
+	@Id
 	private int idMovimiento;
 	private Tarjeta tarjeta;
 	private Date fechaOperacion;

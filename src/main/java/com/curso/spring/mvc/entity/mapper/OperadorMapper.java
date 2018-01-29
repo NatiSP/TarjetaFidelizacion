@@ -1,7 +1,7 @@
 package com.curso.spring.mvc.entity.mapper;
 
 import com.curso.spring.mvc.dto.OperadorDTO;
-import com.curso.spring.mvc.entity.Operador;
+import com.curso.spring.persistencia.entity.Operador;
 
 public class OperadorMapper implements ObjectMapper<Operador, OperadorDTO> {
 

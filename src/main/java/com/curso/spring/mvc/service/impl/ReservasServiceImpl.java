@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import com.curso.spring.mvc.dto.OfertaDTO;
 import com.curso.spring.mvc.dto.ReservaDTO;
 import com.curso.spring.mvc.dto.TarjetaDTO;
-import com.curso.spring.mvc.entity.Movimiento;
 import com.curso.spring.mvc.entity.mapper.OperadorMapper;
 import com.curso.spring.mvc.entity.mapper.TarjetaMapper;
 import com.curso.spring.mvc.service.ReservasService;
+import com.curso.spring.persistencia.entity.Movimiento;
 
 @Service
 public class ReservasServiceImpl implements ReservasService{

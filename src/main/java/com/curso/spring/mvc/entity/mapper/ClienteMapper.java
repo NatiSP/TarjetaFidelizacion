@@ -1,7 +1,7 @@
 package com.curso.spring.mvc.entity.mapper;
 
 import com.curso.spring.mvc.dto.ClienteDTO;
-import com.curso.spring.mvc.entity.Cliente;
+import com.curso.spring.persistencia.entity.Cliente;
 
 public class ClienteMapper implements ObjectMapper<Cliente, ClienteDTO>{
 

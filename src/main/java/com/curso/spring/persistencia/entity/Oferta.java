@@ -1,9 +1,14 @@
-package com.curso.spring.mvc.entity;
+package com.curso.spring.persistencia.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Oferta {
 
+	@Id
 	private int idOferta;
 	private String descripcion;
 	private Operador operador;
