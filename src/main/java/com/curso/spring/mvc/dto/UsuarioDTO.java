@@ -2,20 +2,24 @@ package com.curso.spring.mvc.dto;
 
 public class UsuarioDTO {
 
-	private int id;
+	private String id;
 	private String nombre;
 	private String usuario;
 	private String password;
 
 	public UsuarioDTO(){
-		this.id=1;
+		this.id="1";
 		this.nombre="Usuario 1";
 	}
 	
-	public int getId() {
+	public UsuarioDTO(String id) {
+		this.id=id;
+	}
+
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getNombre() {

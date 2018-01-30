@@ -32,7 +32,7 @@ public class MovimientosController {
 	}
 	
 	@RequestMapping(path = "/verMovimientos", method = RequestMethod.GET)
-	private String verMovimientosUsuarioJSP(@RequestParam int idUsuario) {
+	private String verMovimientosUsuarioJSP(@RequestParam String idUsuario) {
 		MovimientoDTO movimientoCriteria = new MovimientoDTO();
 		ClienteDTO cliente = new ClienteDTO();
 		TarjetaDTO tarjeta = new TarjetaDTO();

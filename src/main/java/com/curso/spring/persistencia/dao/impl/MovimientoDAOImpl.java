@@ -2,9 +2,12 @@ package com.curso.spring.persistencia.dao.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.curso.spring.persistencia.dao.MovimientoDAO;
 import com.curso.spring.persistencia.entity.Movimiento;
 
+@Repository
 public class MovimientoDAOImpl implements MovimientoDAO {
 
 	@Override

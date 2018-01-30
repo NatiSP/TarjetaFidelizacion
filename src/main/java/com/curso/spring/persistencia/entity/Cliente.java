@@ -14,6 +14,10 @@ public class Cliente extends Usuario{
 		this.apellidos = "Unez Unez";
 	}
 	
+	public Cliente(String id) {
+		super(id);
+	}
+
 	public int getPuntos() {
 		return puntos;
 	}

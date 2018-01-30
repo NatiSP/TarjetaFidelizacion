@@ -16,6 +16,10 @@ public class Operador extends Usuario{
 		this.factorConversion = 1.0;
 	}
 	
+	public Operador(String id) {
+		super(id);
+	}
+
 	public String getCif() {
 		return cif;
 	}

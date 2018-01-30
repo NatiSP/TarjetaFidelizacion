@@ -33,7 +33,7 @@ public class ReservasController {
 	}
 	
 	@RequestMapping(path="/verReservas", method=RequestMethod.GET)
-	public String verReservas(@RequestParam int idReserva) {
+	public String verReservas(@RequestParam String idReserva) {
 		ReservaDTO reservaCriteria = new ReservaDTO();
 		MovimientoDTO movimientoCriteria = new MovimientoDTO();
 		TarjetaDTO tarjetaCriteria = new TarjetaDTO();

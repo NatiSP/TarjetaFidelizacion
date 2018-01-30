@@ -8,9 +8,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
+import com.curso.spring.mvc.dto.ClienteDTO;
+import com.curso.spring.mvc.dto.OperadorDTO;
 import com.curso.spring.mvc.dto.UsuarioDTO;
 import com.curso.spring.mvc.service.UsuarioService;
+import com.curso.spring.persistencia.entity.Login;
 
 @Controller
 @RequestMapping("/usuario")
@@ -28,9 +32,14 @@ public class UsuarioController {
 	 * @param id
 	 * @return
 	 */
-	@RequestMapping(path = "/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
-	public UsuarioDTO obtenerUsuarioJSONO(Map<String, Object> model, @PathVariable int id) {
-		return usuarioService.obtenerUsuario(id);
+	@RequestMapping(path = "/cliente/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public ClienteDTO obtenerClienteJSON(Map<String, Object> model, @PathVariable String id) {
+		return usuarioService.obtenerCliente(id);
+	}
+
+	@RequestMapping(path = "/operador/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public OperadorDTO obtenerOperadorJSON(Map<String, Object> model, @PathVariable String id) {
+		return usuarioService.obtenerOperador(id);
 	}
 	
 	/**
@@ -41,8 +50,8 @@ public class UsuarioController {
 	 * @return
 	 */
 	@RequestMapping(path = "/miPerfil", method = RequestMethod.GET)
-	public String obtenerUsuarioMiPerfil(Map<String, Object> model) {
-		model.put("usuario", usuarioService.obtenerUsuario(1));
+	public String obtenerUsuarioMiPerfil(@SessionAttribute("loginData") String usuario, Map<String, Object> model) {
+		model.put("usuario", usuarioService.obtenerCliente(usuario));
 		return DETALLE_USUARIO_VIEW;
 	}
 }

@@ -10,10 +10,10 @@
 </head>
 <body>
 
-	<form:form modelAttribute="usuario">
+	<form:form action="/login/doLogin" modelAttribute="loginData">
 		<form:input path="usuario" />
 		<form:password path="password" />
-		<form:button>Login</form:button>
+		<input type="submit" value="Login"/>
 	</form:form>
 
 	<a href="/TarjetaFidelizacion/usuario/altaCliente">Crear cuenta nueva</a>
