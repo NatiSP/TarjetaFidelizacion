@@ -23,7 +23,7 @@ import com.curso.spring.mvc.entity.mapper.TarjetaMapper;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages="com.curso.spring.mvc")
+@ComponentScan(basePackages= {"com.curso.spring.mvc", "com.curso.spring.persistencia"})
 public class ConfiguracionWeb implements WebMvcConfigurer{
 
 	@Override
