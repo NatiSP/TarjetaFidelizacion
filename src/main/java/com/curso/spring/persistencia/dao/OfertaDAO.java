@@ -6,7 +6,7 @@ import com.curso.spring.persistencia.entity.Oferta;
 
 public interface OfertaDAO {
 
-	public Long insertarOferta(Oferta Oferta);
+	public void insertarOferta(Oferta oferta);
 	
-	public List<Oferta> buscarOfertas(Oferta Oferta);
+	public List<Oferta> buscarOfertas(Oferta oferta);
 }

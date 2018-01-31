@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.curso.spring.mvc.dto.ClienteDTO;
 import com.curso.spring.mvc.dto.MovimientoDTO;
 import com.curso.spring.mvc.dto.TarjetaDTO;
-import com.curso.spring.mvc.dto.UsuarioDTO;
 import com.curso.spring.mvc.service.MovimientosService;
 
 @Controller

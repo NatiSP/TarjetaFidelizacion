@@ -1,8 +1,11 @@
 package com.curso.spring.mvc.entity.mapper;
 
+import org.springframework.stereotype.Component;
+
 import com.curso.spring.mvc.dto.TarjetaDTO;
 import com.curso.spring.persistencia.entity.Tarjeta;
 
+@Component
 public class TarjetaMapper implements ObjectMapper<Tarjeta, TarjetaDTO> {
 
 	@Override

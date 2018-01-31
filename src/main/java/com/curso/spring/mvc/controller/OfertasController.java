@@ -25,19 +25,19 @@ public class OfertasController {
 	
 
 	
-	@RequestMapping(path = "/verDetalleOferta", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(path = "/verDetalleOferta/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public OfertaDTO obtenerOfertaJSON(Map<String, Object> model, @PathVariable int id) {
 		OfertaDTO ofertaCriteria = new OfertaDTO();
 		ofertaCriteria.setIdOferta(id);
 		return ofertasService.verDetalleOferta(ofertaCriteria);
 	}
 	
-	@RequestMapping(path = "/verOfertas", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(path = "/verOfertas/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public List<OfertaDTO> obtenerListaOfertasJSON(Map<String, Object> model, @PathVariable int id) {
 		return ofertasService.verOfertas();
 	}
 	
-	@RequestMapping(path = "/verOfertas", method = RequestMethod.GET)
+	@RequestMapping(path = "/verOfertas/{id}", method = RequestMethod.GET)
 	public String obtenerListaOfertas(Map<String, Object> model, @PathVariable int id) {
 		model.put("ofertas", ofertasService.verOfertas());
 		return LISTA_OFERTAS_VIEW;

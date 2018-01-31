@@ -1,7 +1,9 @@
 package com.curso.spring.persistencia.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Tarjeta {
@@ -9,6 +11,7 @@ public class Tarjeta {
 	@Id
 	private int id;
 	private String numeroTarjeta;
+	@OneToOne(cascade=CascadeType.ALL)
 	private Cliente cliente;
 	
 	public int getId() {

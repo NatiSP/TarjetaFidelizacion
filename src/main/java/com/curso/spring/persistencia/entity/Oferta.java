@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Oferta {
@@ -11,6 +12,7 @@ public class Oferta {
 	@Id
 	private int idOferta;
 	private String descripcion;
+	@ManyToOne
 	private Operador operador;
 	private Date fechaInicio;
 	private Date fechaFin;

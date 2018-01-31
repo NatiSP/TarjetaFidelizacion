@@ -28,11 +28,11 @@ public class ConfiguracionPersistencia {
 
 	@Bean
 	@Autowired
-	public LocalContainerEntityManagerFactoryBean sessionFactory(DataSource dataSource) {
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
 		LocalContainerEntityManagerFactoryBean localEntityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 
 		localEntityManagerFactoryBean.setDataSource(dataSource);
-		localEntityManagerFactoryBean.setPackagesToScan("com.curso.spring.persistencia.entidades");
+		localEntityManagerFactoryBean.setPackagesToScan("com.curso.spring.persistencia.entity");
 		localEntityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 		Properties jpaProperties = new Properties();
 

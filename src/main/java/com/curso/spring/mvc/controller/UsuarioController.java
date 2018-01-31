@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 
 import com.curso.spring.mvc.dto.ClienteDTO;
 import com.curso.spring.mvc.dto.OperadorDTO;
-import com.curso.spring.mvc.dto.UsuarioDTO;
 import com.curso.spring.mvc.service.UsuarioService;
-import com.curso.spring.persistencia.entity.Login;
 
 @Controller
 @RequestMapping("/usuario")

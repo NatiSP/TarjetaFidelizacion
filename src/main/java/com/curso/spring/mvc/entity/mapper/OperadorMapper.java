@@ -1,8 +1,11 @@
 package com.curso.spring.mvc.entity.mapper;
 
+import org.springframework.stereotype.Component;
+
 import com.curso.spring.mvc.dto.OperadorDTO;
 import com.curso.spring.persistencia.entity.Operador;
 
+@Component
 public class OperadorMapper implements ObjectMapper<Operador, OperadorDTO> {
 
 	@Override

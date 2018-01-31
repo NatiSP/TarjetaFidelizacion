@@ -4,16 +4,19 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Movimiento {
 
 	@Id
 	private int idMovimiento;
+	@ManyToOne
 	private Tarjeta tarjeta;
 	private Date fechaOperacion;
 	private int cantidadPuntos;
 	private String descripcion;
+	@ManyToOne
 	private Operador operador;
 	
 	public int getIdMovimiento() {

@@ -6,8 +6,10 @@ import com.curso.spring.persistencia.entity.Movimiento;
 
 public interface MovimientoDAO {
 
-	public Long insertarMovimiento(Movimiento movimiento);
+	public void insertarMovimiento(Movimiento movimiento);
 	
 	public List<Movimiento> buscarMovimientos(Movimiento movimiento);
+
+	public List<Movimiento> buscarMovimientosUsuario(Movimiento movimiento);
 	
 }

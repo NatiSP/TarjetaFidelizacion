@@ -6,7 +6,7 @@ import com.curso.spring.persistencia.entity.Reserva;
 
 public interface ReservaDAO {
 
-	public Long insertarReserva(Reserva Reserva);
+	public void insertarReserva(Reserva reserva);
 	
-	public List<Reserva> buscarReservas(Reserva Reserva);
+	public List<Reserva> buscarReservas(Reserva reserva);
 }

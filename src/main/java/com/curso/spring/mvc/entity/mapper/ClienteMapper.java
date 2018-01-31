@@ -1,8 +1,11 @@
 package com.curso.spring.mvc.entity.mapper;
 
+import org.springframework.stereotype.Component;
+
 import com.curso.spring.mvc.dto.ClienteDTO;
 import com.curso.spring.persistencia.entity.Cliente;
 
+@Component
 public class ClienteMapper implements ObjectMapper<Cliente, ClienteDTO>{
 
 	@Override

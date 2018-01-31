@@ -6,7 +6,7 @@ import com.curso.spring.persistencia.entity.Tarjeta;
 
 public interface TarjetaDAO {
 
-	public Long insertarTarjeta(Tarjeta Tarjeta);
+	public void insertarTarjeta(Tarjeta tarjeta);
 	
-	public List<Tarjeta> buscarTarjetas(Tarjeta Tarjeta);
+	public List<Tarjeta> buscarTarjetas(Tarjeta tarjeta);
 }

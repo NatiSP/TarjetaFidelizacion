@@ -1,10 +1,12 @@
 package com.curso.spring.mvc.entity.mapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.curso.spring.mvc.dto.MovimientoDTO;
 import com.curso.spring.persistencia.entity.Movimiento;
 
+@Component
 public class MovimientoMapper implements ObjectMapper<Movimiento, MovimientoDTO>{
 
 	@Autowired

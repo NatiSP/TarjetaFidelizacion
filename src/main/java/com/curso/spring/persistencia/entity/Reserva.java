@@ -4,12 +4,14 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Reserva {
 
 	@Id
 	private int idReserva;
+	@OneToOne
 	private Movimiento movimientoAsociado;
 	private Date fechaReserva;
 	

@@ -3,9 +3,9 @@ package com.curso.spring.persistencia.dao.impl;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.curso.spring.persistencia.dao.UsuarioDAO;
@@ -17,7 +17,7 @@ import com.curso.spring.persistencia.entity.Usuario;
 @Repository
 public class UsuarioDAOImpl implements UsuarioDAO {
 
-	@Autowired
+	@PersistenceContext
 	EntityManager em;
 	
 	@Override
